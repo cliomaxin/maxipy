@@ -361,6 +361,101 @@
                 padding: 80px 30px 40px;
             }
         }
+
+        /* New: YouTube and Payment section styles */
+        .social-section {
+            padding: 80px 80px;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .social-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .youtube-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Pure CSS YouTube logo */
+        .yt-logo {
+            width: 92px;
+            height: 60px;
+            background: #ff0000;
+            border-radius: 14px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+            flex: 0 0 auto;
+        }
+
+        .yt-logo::before {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 24px solid #fff;
+            border-top: 14px solid transparent;
+            border-bottom: 14px solid transparent;
+            transform: translateX(3px);
+        }
+
+        .youtube-text h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            margin-bottom: 6px;
+        }
+
+        .youtube-text p {
+            color: #666;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        .payment-section {
+            padding: 80px 80px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .payment-card {
+            max-width: 820px;
+            margin: 0 auto;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px;
+            border: 1px solid #eaeaea;
+            box-shadow: 0 8px 30px rgba(10,10,10,0.04);
+            border-radius: 8px;
+            flex-wrap: wrap;
+        }
+
+        .pay-details { text-align: left; }
+        .pay-details h3 { font-family: 'Playfair Display', serif; font-size: 1.25em; margin-bottom: 6px; }
+        .pay-row { display: flex; gap: 12px; align-items: center; margin-bottom: 8px; }
+        .code { font-weight: 700; background: #f4f4f4; padding: 8px 12px; border-radius: 6px; font-family: monospace; min-width: 110px; text-align: center; }
+        .copy-btn { background: #1a1a1a; color: #fff; padding: 8px 12px; border: none; cursor: pointer; border-radius: 6px; font-weight: 600; }
+        .copy-btn:active { transform: translateY(1px); }
+        .paynote { color: #777; font-weight: 300; margin-top: 8px; }
+
+        @media (max-width: 768px) {
+            .social-inner, .payment-card { flex-direction: column; align-items: center; text-align: center; }
+            .pay-details { text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -446,12 +541,130 @@
         </div>
     </section>
 
+    <!-- New: YouTube Link Section -->
+    <section class="social-section" aria-labelledby="youtube-heading">
+        <div class="container social-inner">
+            <a href="https://www.youtube.com/CHANNEL_ID" target="_blank" rel="noopener" class="youtube-card" aria-label="Visit our YouTube channel">
+                <div class="yt-logo" aria-hidden="true"></div>
+                <div class="youtube-text">
+                    <h3 id="youtube-heading">Subscribe to MaxiPy on YouTube</h3>
+                    <p>Video guides, reviews and quick tips to help you pick the perfect computer.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- New: Payment / Paybill Section -->
+    <section class="payment-section" aria-labelledby="payment-heading">
+        <div class="container">
+            <h2 id="payment-heading">Support Us — Paybill</h2>
+            <div class="payment-card" role="group" aria-label="Payment details">
+                <div class="pay-details">
+                    <h3>MPESA Paybill</h3>
+                    <div class="pay-row">
+                        <div class="code" id="paybill">400200</div>
+                        <button class="copy-btn" data-copy="#paybill" aria-label="Copy paybill number">Copy</button>
+                    </div>
+                    <div class="pay-row">
+                        <div class="code" id="acc">1103917</div>
+                        <button class="copy-btn" data-copy="#acc" aria-label="Copy account number">Copy</button>
+                    </div>
+                    <div class="paynote">Use Paybill 400200 and Account 1103917 when making payments.</div>
+                </div>
+                <div class="pay-actions">
+                    <a href="https://wa.link/f1lyci" class="cta-btn">💬 Need Help with Payment?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collab-section" aria-labelledby="collab-heading" style="padding: 100px 80px; background: #f5f7fa;">
+        <div class="container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 id="collab-heading" style="margin-bottom: 40px;">Laptop Sellers & Shops — Partner With MaxiPy</h2>
+            <p style="font-size: 1.2em; color: #333; margin-bottom: 32px;">
+                Are you a laptop shop or seller? Collaborate with MaxiPy to reach more customers and offer smarter solutions. 
+                Send us your details and let's work together!
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 18px; align-items: center; justify-content: center;">
+                <a href="mailto:maxipytech@gmail.com" class="cta-btn" style="margin-bottom: 0;">📧 Email: maxipytech@gmail.com</a>
+                <a href="https://wa.link/f1lyci" class="cta-btn">💬 WhatsApp: Chat with MaxiPy</a>
+            </div>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <div class="footer-logo">MAXIPY</div>
             <p>© 2025 MaxiPy. All Rights Reserved.</p>
             <p>Smart Computer Solutions for Every Need.</p>
+            <div style="margin-top: 32px; display: flex; justify-content: space-evenly; gap: 18px; flex-wrap: wrap;">
+                
+                <h3> Join our community: </h4> <hr>
+                <a href="https://www.tiktok.com/@maxipytech" target="_blank" rel="noopener" aria-label="TikTok" style="display: flex; align-items: center; text-decoration: none; color: #fff; font-size: 1.4em;">
+                    <!-- TikTok Icon -->
+                    <span style="display:inline-block;width:24px;height:24px;position:relative;margin-right:8px;">
+                        <span style="position:absolute;left:7px;top:4px;width:10px;height:10px;background:#fff;border-radius:50%;"></span>
+                        <span style="position:absolute;left:4px;top:8px;width:16px;height:8px;background:#25F4EE;border-radius:8px 8px 8px 8px;transform:rotate(-20deg);"></span>
+                        <span style="position:absolute;left:10px;top:2px;width:6px;height:18px;background:#000;border-radius:3px;"></span>
+                        <span style="position:absolute;left:13px;top:6px;width:6px;height:6px;background:#FE2C55;border-radius:50%;"></span>
+                    </span>
+                    <span style="vertical-align: middle;">TikTok</span>
+                </a>
+                <a href="https://www.youtube.com/@maxipytech" target="_blank" rel="noopener" aria-label="YouTube" style="display: flex; align-items: center; text-decoration: none; color: #fff; font-size: 1.4em;">
+                    <!-- YouTube Icon -->
+                    <span style="display:inline-block;width:24px;height:24px;position:relative;margin-right:8px;">
+                        <span style="display:block;width:24px;height:16px;background:#ff0000;border-radius:4px;position:absolute;top:4px;left:0;"></span>
+                        <span style="position:absolute;top:8px;left:8px;width:0;height:0;border-left:8px solid #fff;border-top:4px solid transparent;border-bottom:4px solid transparent;"></span>
+                    </span>
+                    <span style="vertical-align: middle;">YouTube</span>
+                </a>
+                <a href="https://www.instagram.com/maxipytech" target="_blank" rel="noopener" aria-label="Instagram" style="display: flex; align-items: center; text-decoration: none; color: #fff; font-size: 1.4em;">
+                    <!-- Instagram Icon -->
+                    <span style="display:inline-block;width:24px;height:24px;position:relative;margin-right:8px;">
+                        <span style="display:block;width:24px;height:24px;background:radial-gradient(circle at 70% 30%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);border-radius:6px;position:absolute;top:0;left:0;"></span>
+                        <span style="position:absolute;top:6px;left:6px;width:12px;height:12px;background:#fff;border-radius:50%;opacity:0.7;"></span>
+                        <span style="position:absolute;top:10px;left:10px;width:4px;height:4px;background:#d6249f;border-radius:50%;"></span>
+                        <span style="position:absolute;top:4px;left:16px;width:4px;height:4px;background:#fff;border-radius:50%;"></span>
+                    </span>
+                    <span style="vertical-align: middle;">Instagram</span>
+                </a>
+            </div>
+                
+            </div>
         </div>
     </footer>
+
+    <script>
+    // Copy-to-clipboard behaviour for pay details
+    document.querySelectorAll('.copy-btn').forEach(function(btn){
+        btn.addEventListener('click', function(){
+            var target = document.querySelector(this.getAttribute('data-copy'));
+            if(!target) return;
+            var text = target.innerText.trim();
+            if(navigator.clipboard && navigator.clipboard.writeText){
+                navigator.clipboard.writeText(text).then(function(){
+                    var original = btn.innerText;
+                    btn.innerText = 'Copied!';
+                    setTimeout(function(){ btn.innerText = original; }, 1600);
+                }, function(){
+                    alert('Unable to copy. Please copy manually: ' + text);
+                });
+            } else {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy');
+                    var original = btn.innerText;
+                    btn.innerText = 'Copied!';
+                    setTimeout(function(){ btn.innerText = original; }, 1600);
+                } catch(e){
+                    alert('Unable to copy. Please copy manually: ' + text);
+                }
+                document.body.removeChild(ta);
+            }
+        });
+    });
+    </script>
 </body>
 </html>

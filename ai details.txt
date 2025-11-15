@@ -1,0 +1,1 @@
+create another section that encompasses a link to our youtube channel(create the youtube logo with pure css and html), and after that another section with our paybill payment details (mpesa paybill - 400200 and account number 1103917; one has the options to copy the paybill and the acc number)
