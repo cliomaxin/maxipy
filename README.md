@@ -1,1 +1,2 @@
 # maxipy
+maxipy is a simple HTML website designed to provide information and resources about our services. We focus on delivering user-friendly content and easy navigation for visitors. Anyone interested in contributing to the development of this website is welcome—just fork the repository and submit your improvements!
